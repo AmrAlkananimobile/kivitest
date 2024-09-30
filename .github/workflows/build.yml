@@ -27,6 +27,10 @@ jobs:
           path: .buildozer
           key: ${{ runner.os }}-${{ env.date }}-${{ hashFiles('buildozer.spec') }}
 
+          # قائمة الملفات للتحقق من وجود buildozer.spec
+      - name: List files
+        run: ls -R
+
       # البناء باستخدام Buildozer
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
