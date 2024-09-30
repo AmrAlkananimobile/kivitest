@@ -15,14 +15,14 @@ jobs:
 
       # تخزين الدليل العالمي لـ Buildozer
       - name: Cache Buildozer global directory
-        uses: actions/cache@v2
+        uses: actions/cache@v3  # تحديث إلى الإصدار الجديد
         with:
           path: .buildozer_global
-          key: buildozer-global-${{ hashFiles('buildozer.spec') }} # استبدل بالمسار الخاص بك
+          key: buildozer-global-${{ hashFiles('buildozer.spec') }}
 
       # تخزين دليل Buildozer
       - name: Cache Buildozer directory
-        uses: actions/cache@v2
+        uses: actions/cache@v3  # تحديث إلى الإصدار الجديد
         with:
           path: .buildozer
           key: ${{ runner.os }}-${{ env.date }}-${{ hashFiles('buildozer.spec') }}
@@ -41,5 +41,3 @@ jobs:
         with:
           name: package
           path: ./bin/*  # تأكد من أن هذا المسار هو المكان الذي يتم فيه تخزين ملفات APK
-
-
