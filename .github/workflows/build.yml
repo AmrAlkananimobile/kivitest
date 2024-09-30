@@ -40,5 +40,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: package
-          path: ${{ steps.buildozer.outputs.filename }}
+          path: ./bin/*  # تأكد من أن هذا المسار هو المكان الذي يتم فيه تخزين ملفات APK
+
 
