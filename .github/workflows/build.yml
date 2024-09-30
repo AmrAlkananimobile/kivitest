@@ -25,7 +25,7 @@ jobs:
         uses: actions/cache@v3  # تحديث إلى الإصدار الجديد
         with:
           path: .buildozer
-          key: ${{ runner.os }}-${{ env.date }}-${{ hashFiles('buildozer.spec') }}
+          key: ${{ runner.os }}-${{ env.date }}-${{ hashFiles('C:\Users\AJA\Desktop\FoodRestorant\‏‏facemobileKivy\buildozer.spec') }}
 
           # قائمة الملفات للتحقق من وجود buildozer.spec
       - name: List files
